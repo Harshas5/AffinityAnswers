@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Set the input and output file names
+input_file="aditya_birla_funds.txt"
+output_file="aditya_birla_funds.csv"
+
+# Extract the Scheme Name and Asset Value fields and save them in the output file
+grep -oP '(?<=";)[^;]*(?=\s*-\s*(?:DIRECT|REGULAR|retail)?\s*-\s*(?:IDCW|MONTHLY IDCW|Quarterly IDCW)?\s*(?:- Growth)?;)\s*;\K[^;]*(?=\s*;)' "$input_file" | paste -d, - - > "$output_file"

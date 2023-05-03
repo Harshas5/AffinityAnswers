@@ -1,0 +1,18 @@
+A: 
+
+
+
+
+
+B: 
+The "rfam_acc" column in the "family" table can be used to connect to the "full_region" and "seed_region" tables, which also have the "rfam_acc" column.
+
+The "rfamseq_acc" column in the "full_region" and "seed_region" tables can be used to connect to the "rna_sequence" table, which also has the "rfamseq_acc" column.
+
+The "rfamseq_acc" column in the "rfamseq_source" table can be used to connect to the "rna_sequence" table, which also has the "rfamseq_acc" column.
+
+The "structure_id" column in the "full_region" table can be used to connect to the "secondary_structure" table, which also has the "structure_id" column.
+
+The "structure_id" column in the "seed_region" table can also be used to connect to the "secondary_structure" table.
+
+The "tax_id" column in the "ncbi_taxonomy" table can be used to connect to the "rna_sequence" table, which also has the "tax_id" column.
